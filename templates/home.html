@@ -4,24 +4,62 @@
     <title>
       Careers
     </title>
+    <style>
+      h1 {
+        font-size: 40px;
+        font-family: Roboto;
+        font-weight: normal;
+        color: rgb(100, 100, 100);
+        text-align: center;
+      }
+      #banner {
+        width: 100%;
+        height: 360px;
+        object-fit: cover
+      }
+      h2{
+        font-family: Roboto;
+        font: size; 32px;
+        color: rgb(150, 150, 150);
+        text-align: center; 
+        font-weight: normal; 
+      }
+      .bodytext {
+        font-family: Roboto; 
+        color: rgb(160,160,160)
+      }
+
+      #container {
+        max-width: 720px; 
+        margin: 0 auto 0 auto;  
+        
+      }
+    </style>
   </head>
   <body>
+    <div id="container">
     <h1>Sample Careers Page</h1> 
-    <img src="static/sample_img.jpeg" height="320" >
+    <img id="banner" src="static/sample_img.jpeg" >
     <h2>
       About Careers
     </h2>
-    <p>
+    <p class="bodytext">
       Lorem ipsum odor amet, consectetuer adipiscing elit. Semper vestibulum potenti pellentesque eleifend pulvinar congue enim. Orci tempus semper odio maximus, felis curae erat quisque. Donec mi gravida quam faucibus tellus fames. Metus hendrerit pharetra enim accumsan vulputate aliquet. Luctus consequat magnis condimentum convallis libero nec. Viverra mi suscipit tristique lacus porta. Luctus penatibus dis ante lorem parturient pretium maximus morbi. Blandit potenti ornare et volutpat suscipit.
     </p>
     <h2>
       Open Positions
     </h2>
-    <p>
+    <p class="bodytext">
       TODO - Show the jobs here
     </p>
+      <div style="text-align:center;">
     <button>
       Contact Us
     </button>
+        <p>
+          Copyright 2024, Sample
+        </p>
+      </div>
+    </div>
   </body>
 </html>
