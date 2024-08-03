@@ -8,6 +8,8 @@
       #banner{
         height: 306px;
         width: 100%;
+        object-fit: cover;
+        margin-bottom: 16px;
       }
     </style>
     <title>
@@ -15,15 +17,20 @@
     </title>
   </head>
   <body>
-    <div class="container">
-    <h1 class="text-center mt-2 mb-4">Sample Careers Page</h1> 
+    {% include 'nav.html' %}
     <img class="img-fluid" id="banner" src="static/sample_img.jpeg" >
-    <h2 class="text-center mt-2 mb-4">
-      About Careers
-    </h2>
+    <div class="container">
+    <h1 class="text-center mt-2 mb-4">Sample Careers Page</h1>
+      <div class="row" style="margin-bottom:16px">
+        <div class="col-md-6"
     <p class="lead">
       Lorem ipsum odor amet, consectetuer adipiscing elit. Semper vestibulum potenti pellentesque eleifend pulvinar congue enim. Orci tempus semper odio maximus, felis curae erat quisque. Donec mi gravida quam faucibus tellus fames. Metus hendrerit pharetra enim accumsan vulputate aliquet. Luctus consequat magnis condimentum convallis libero nec. Viverra mi suscipit tristique lacus porta. Luctus penatibus dis ante lorem parturient pretium maximus morbi. Blandit potenti ornare et volutpat suscipit.
     </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+        <img src="/static/people.jpeg" style="height:320px;border-radius:4px;">
+        </div>
+      </div>
     <h2 class="text-center mt-2 mb-4">
       Job Openings
     </h2>
@@ -33,13 +40,11 @@
       {% endfor %}
     </div>
       <div class="text-center">
-    <button class="btn btn-primary btn-lg">
+    <a class="btn btn-primary btn-lg" href="mailto:samplecarrer@gmail.com?subject=Question%20about%20Job%20openings&body=My%20name%20%3A%20%3C%20your%20name%20%3E%0D%0A%0D%0AMy%20Question%3A%20%3Center%20question%20here%3E">
       Contact Us
-    </button>
-        <p class="mt-4">
-          Copyright 2024, Sample
-        </p>
+    </a>
       </div>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
