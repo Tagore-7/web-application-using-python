@@ -24,7 +24,7 @@ JOBS = [
   {
     "id": 4,
     "title": "Data Scientist",
-    "location": "New York,USA",
+    "location": "New York, USA",
     "Salary":"$150,000"
   },
   
