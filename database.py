@@ -3,8 +3,9 @@ import sqlalchemy
 # print(sqlalchemy.__version__)
 
 from sqlalchemy import create_engine, text
+import os
 
-db_connection_string = "mysql+pymysql://2d1KPCHFnP4uEtv.root:Px4FYj0q6GtBTKiC@gateway01.us-east-1.prod.aws.tidbcloud.com/test"
+db_connection_string = os.environ['DB_CONNECTION_STRING']
 
 # import pymysql
 
@@ -27,24 +28,15 @@ engine = create_engine(db_connection_string,
                       }
                       )
 
-with engine.connect() as conn:
-  
-  result = conn.execute(text("select * from jobs"))
-
-  result_dicts = []
-  for row in result.all():
-    result_dicts.append(row._asdict())
-  print(result_dicts)
 
 
 
-  # print("type(result):", type(result))
-  # result_all = result.all()
-  # print("type(result.all())", type(result_all))
-  # print("result.all():", result_all)
-  # first_result = result_all[0]
-  # print("type(first_result):", type(first_result))
-  # first_result_dict = dict(result_all[0])
-  # print(f"type(first_result_dict): {type(first_result_dict)}")
-  # print(f"first_result_dict: {first_result_dict}")
-  
+def load_jobs_from_db():
+  with engine.connect() as conn:
+    result = conn.execute(text("select * from jobs"))
+    jobs = []
+    for row in result.all():
+      jobs.append(row._asdict())
+    return jobs
+
+ 
